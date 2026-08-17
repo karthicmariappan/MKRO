@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MK Crackers | Price List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top-strip"><div class="container strip-inner">
+  <b>🎆 MK CRACKERS</b><span>Online Price List & Enquiry</span>
+  <a href="tel:+919629605422">📞 +91 96296 05422</a>
+</div></div>
+
+<header class="site-header"><div class="container header-inner">
+  <a class="logo" href="#top"><div class="logo-mark">MK</div><div><strong>MK CRACKERS</strong><small>Celebrate • Share • Smile</small></div></a>
+  <nav>
+    <a href="#catalogue">Price List</a>
+    <a href="gift-boxes.html">🎁 Gift Boxes</a>
+    <a href="#cart">🛒 Cart <b id="navCount">0</b></a>
+  </nav>
+  <button class="menu" id="menuBtn">☰</button>
+</div></header>
+
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <div>
+      <div class="badge">🎇 161+ CRACKER VARIETIES</div>
+      <h1>MK Crackers <span>Price List</span></h1>
+      <p>Search any cracker, check the pack and price, enter your required quantity and add it to your enquiry cart.</p>
+      <a class="primary" href="#catalogue">Browse Crackers ↓</a>
+    </div>
+    <div class="hero-art">🎆<strong>Festival Offers</strong><small>Easy Enquiry • Quick Callback</small></div>
+  </div>
+</section>
+
+<div class="notice"><div class="container">
+  <b>Note:</b> This is an enquiry catalogue. MK Crackers will call you to confirm availability, final price and fulfilment.
+</div></div>
+
+<section id="catalogue" class="catalogue">
+<div class="container">
+  <div class="title">
+    <span>COMPLETE PRICE LIST</span>
+    <h2>Browse All Crackers</h2>
+    <p>Type a product name below. The list updates immediately.</p>
+  </div>
+
+  <div class="search-panel">
+    <div class="search-box">🔎 <input id="search" type="search" autocomplete="off" placeholder="Search crackers... e.g. Kuruvi, Lakshmi, Flowerpot, Rocket"></div>
+    <select id="category"><option value="all">All Categories</option></select>
+    <select id="sort">
+      <option value="default">Default</option>
+      <option value="az">Name A-Z</option>
+      <option value="low">Price Low → High</option>
+      <option value="high">Price High → Low</option>
+    </select>
+  </div>
+
+  <div class="result-info"><span id="resultCount"></span><button id="clearSearch" type="button">Clear Search</button></div>
+
+  <div class="table-wrap">
+    <div class="table-head">
+      <div>Image</div><div>Product Name</div><div>Content</div><div>Actual Price</div><div>Price</div><div>Quantity</div><div>Total</div>
+    </div>
+    <div id="productList"></div>
+    <div id="dataError" style="display:none;padding:20px;background:#fff0f0;color:#900;text-align:center;font-weight:800">
+      Product list could not be loaded. Please make sure <b>products.js</b> is uploaded in the same folder as <b>index.html</b>.
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="cart" class="cart-section">
+<div class="container">
+  <div class="title"><span>YOUR SELECTION</span><h2>Enquiry Cart</h2><p>Selected crackers will be sent to your Google Sheet when you submit.</p></div>
+  <div class="cart-layout">
+    <div class="cart-box">
+      <div class="cart-header"><b>Selected Products</b><span id="cartSummary">0 items</span></div>
+      <div id="cartItems"></div>
+      <div id="emptyCart" class="empty">🛒<b>Your cart is empty</b><span>Browse the price list and enter quantity.</span></div>
+    </div>
+    <div class="checkout">
+      <div class="totals"><span>Total Quantity</span><b id="totalQty">0</b><span>Total Amount</span><strong>₹<i id="grandTotal">0.00</i></strong></div>
+      <h3>Customer Details</h3>
+      <form id="enquiryForm">
+        <label>Full Name *<input name="name" required></label>
+        <label>Mobile Number *<input name="mobile" required inputmode="tel"></label>
+        <label>WhatsApp Number<input name="whatsapp" inputmode="tel"></label>
+        <label>Location *<input name="location" required></label>
+        <label>Pincode<input name="pincode" inputmode="numeric"></label>
+        <label>Preferred Contact<select name="contactPreference" required><option value="">Select</option><option>Phone Call</option><option>WhatsApp</option></select></label>
+        <label>Notes<textarea name="notes" rows="3"></textarea></label>
+        <label class="agree"><input type="checkbox" required><span>I understand this is an enquiry. MK Crackers will contact me to confirm availability, price and fulfilment details.</span></label>
+        <button class="submit" type="submit">✅ Submit Enquiry</button>
+      </form>
+      <div id="result"></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="floating-download">
+  <b>📥 Price List</b>
+  <a href="MK-Crackers-Price-List.xlsx" download>Download Excel</a>
+  <a href="MK-Crackers-Price-List.pdf" download>Download PDF</a>
+</div>
+<div class="floating-cart"><a href="#cart">🛒 <b id="floatCount">0</b> <span>Cart</span> ₹<strong id="floatTotal">0</strong></a></div>
+
+<footer><div class="container"><b>MK CRACKERS</b><span>Online Enquiry Price List • +91 96296 05422</span></div></footer>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
